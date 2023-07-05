@@ -51,6 +51,14 @@
 						<!-- jumbotron -->
 						<div class="jumbotron">
 							<h1>Visal Dezan Prananda <br> & <br>Astriyani</h1>
+							<div id="countdown">
+								    <ul>
+								      <li><span id="day"></span>days</li>
+								      <li><span id="hour"></span>Hours</li>
+								      <li><span id="minute"></span>Minutes</li>
+								      <li><span id="second"></span>Seconds</li>
+								    </ul>
+								</div>
 						</div>
 						<div class="doa">
 							<blockquote>
@@ -77,7 +85,7 @@
 						</div>
 						<!-- Intro -->
 							<article id="intro">
-								<h2 class="major">Intro</h2>
+								<h2 class="major">Akad Nikah</h2>
 								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
 								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
@@ -407,6 +415,25 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
 				          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
 				          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+				      },0)
+				  }());
+				(function countDownLagi() {
+				  const second = 1000,
+				        minute = second * 60,
+				        hour = minute * 60,
+				        day = hour * 24;
+				  
+				  const birthday = "07/11/2023";
+				  const countDown = new Date(birthday).getTime(),
+				      x = setInterval(function() {    
+
+				        const now = new Date().getTime(),
+				              distance = countDown - now;
+
+				        document.getElementById("day").innerText = Math.floor(distance / (day)),
+				          document.getElementById("hour").innerText = Math.floor((distance % (day)) / (hour)),
+				          document.getElementById("minute").innerText = Math.floor((distance % (hour)) / (minute)),
+				          document.getElementById("second").innerText = Math.floor((distance % (minute)) / second);
 				      },0)
 				  }());
 			</script>
