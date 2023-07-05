@@ -27,6 +27,7 @@
 	// Play initial animations on page load.
 		$window.on('load', function() {
 			window.setTimeout(function() {
+				AOS.init();
 				$body.removeClass('is-preload');
 			}, 100);
 		});
@@ -305,14 +306,6 @@
 
 			});
 
-		// Events.
-			$body.on('click', function(event) {
-
-				// Article visible? Hide.
-					if ($body.hasClass('is-article-visible'))
-						$main._hide(true);
-
-			});
 
 			$window.on('keyup', function(event) {
 
