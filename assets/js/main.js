@@ -5,7 +5,6 @@
 */
 
 (function($) {
-
 	var	$window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper'),
@@ -92,7 +91,6 @@
 
 							// Deactivate all articles (just in case one's already active).
 								$main_articles.removeClass('active');
-
 							// Hide header, footer.
 								$header.hide();
 								$footer.hide();

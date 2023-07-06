@@ -9,7 +9,6 @@
 		<title>Visal & Astriyani</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1.0, user-scalable=no" />
-		
 		<!-- aos -->
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -30,7 +29,7 @@
 							<div class="inner">
 								<h1>Wedding Invitation</h1>
 								<p>kepada Yth Saudara/Saudari </p>
-								<h3>Nahrul Hayat</h3>
+								<h3 id="to"></h3>
 								<p>Kami Mengundang Anda untuk hadir dalam pernikahan kami yang akan diselenggarakan pada hari <br>Selasa, 11 July 2023</p>
 								<div id="countdown">
 								    <ul>
@@ -44,7 +43,7 @@
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#intro">Open Invitation</a></li>
+								<li class="play"><a href="#intro">Open Invitation</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
@@ -52,6 +51,12 @@
 
 				<!-- Main -->
 					<div id="main">
+						<!-- music -->
+						<div class="music">
+							<audio id="music" src="assets/music/music.mp3" loop></audio>
+							<button class="icon brands fa-tiktok fa-beat-fade play"><i class=""></i></button>
+							</li>
+						</div>
 						<!-- jumbotron -->
 						<div class="jumbotron">
 							<h1 data-aos="zoom-in">Visal Dezan Prananda <br> & <br>Astriyani</h1>
@@ -117,6 +122,54 @@
 									<button class="button">Konfirmasi</button>
 								</div>
 							</article>
+							<section id="gallery">
+								<h1>Our Gallery</h1>
+								<div class="container">
+
+								<div class="gallery-container w-3 h-2">
+									<div class="gallery-item">
+									<div class="image">
+										<img src="images/kuwu3.jpg" alt="nature">
+									</div>
+									</div>
+								</div>
+
+								<div class="gallery-container w-3 h-2">
+									<div class="gallery-item">
+									<div class="image">
+										<img src="images/kuwu4.jpg" alt="people">
+									</div>
+									</div>
+								</div>
+
+								<div class="gallery-container w-3 h-2">
+									<div class="gallery-item">
+									<div class="image">
+										<img src="images/kuwu5.jpg" alt="sport">
+									</div>
+									</div>
+								</div>
+
+								<div class="gallery-container w-2 h-2">
+									<div class="gallery-item">
+									<div class="image">
+										<img src="images/kuwu2.jpg" alt="fitness">
+									</div>
+									</div>
+								</div>
+
+								<div class="gallery-container w-4 h-1">
+									<div class="gallery-item">
+									<div class="image">
+										<img src="images/bg.jpg" alt="food">
+									</div>
+									</div>
+								</div>
+
+		
+
+								</div>
+							</section>
 
 						<!-- Work -->
 							<article id="work">
@@ -463,10 +516,60 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				          document.getElementById("second").innerText = Math.floor((distance % (minute)) / second);
 				      },0)
 				  }());
+				//   gallery
+				var gallery = document.querySelector('#gallery');
+				var getVal = function (elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
+				var getHeight = function (item) { return item.querySelector('.content').getBoundingClientRect().height; };
+				var resizeAll = function () {
+					var altura = getVal(gallery, 'grid-auto-rows');
+					var gap = getVal(gallery, 'grid-row-gap');
+					gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+						var el = item;
+						el.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
+					});
+				};
+				gallery.querySelectorAll('img').forEach(function (item) {
+					item.classList.add('byebye');
+					if (item.complete) {
+						console.log(item.src);
+					}
+					else {
+						item.addEventListener('load', function () {
+							var altura = getVal(gallery, 'grid-auto-rows');
+							var gap = getVal(gallery, 'grid-row-gap');
+							var gitem = item.parentElement.parentElement;
+							gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
+							item.classList.remove('byebye');
+						});
+					}
+				});
+				window.addEventListener('resize', resizeAll);
+				gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+					item.addEventListener('click', function () {        
+						item.classList.toggle('full');        
+					});
+				});
+				var audio = document.getElementById("music");
+				function pauseAudio() {
+					audio.pause();
+				}
+				// $('.test').click(function() {
+				// 	audio.play();
+				// })
+				$('.play').click(function() {
+				if (audio.paused == false) {
+					audio.pause();
+				} else {
+					audio.play();
+				}
+				});
+				var urlParams = new URLSearchParams(window.location.search);
+				var to = urlParams.get("to");
+				console.log(to);
+				const people = document.getElementById("to")
+				people.innerText = to.replace(/-/g, " ");
+
 			</script>
 
 	</body>
 </html>
-<script>
-	AOS.init();
-</script>
