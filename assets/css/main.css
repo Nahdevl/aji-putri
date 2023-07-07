@@ -1973,7 +1973,7 @@ input, select, textarea {
 		  	align-items: center;
 		  	background-color: #b2b2b2;
 		  	width: 100vw;
-		  	height: 100vh;
+		  	height: 70vh;
 		  	flex-direction: column;
 		  }
 		  .hadiah img{
