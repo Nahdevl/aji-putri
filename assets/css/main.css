@@ -1689,12 +1689,18 @@ input, select, textarea {
 		h2.major{
 			margin: 0;
 		}
-		#intro .resepsi{
+		.inform{
+			margin: 3em 1em;
+		}
+		.inform .resepsi{
 			display: flex;
 			flex-direction: column;
 			align-items: flex-end;
 			text-align: end;
 			margin-top: 5em 0;
+		}
+		.inform h3 {
+			color:#af944b;
 		}
 
 		#intro .map{
@@ -1702,12 +1708,13 @@ input, select, textarea {
 			flex-direction: column;
 			align-items: center;
 			gap: 1em;
+			margin-top: 2em;
 		}
 		.konfirmasi{
 			display: flex;
 			align-items: center;
 			flex-direction: column;
-			margin: 10em 0;
+			margin: 4em 0;
 			gap: 1rem;
 		}
 		.konfirmasi .field.half{
@@ -1959,4 +1966,16 @@ input, select, textarea {
 			bottom: 15px;
 			right: 10px;
 			z-index: 2;
+		  }
+		  .hadiah{
+		  	display: flex;
+		  	justify-content: center;
+		  	align-items: center;
+		  	background-color: #4c3e19;
+		  	width: 100vw;
+		  	height: 100vh;
+		  	flex-direction: column;
+		  }
+		  .hadiah img{
+		  	width: 100%;
 		  }
