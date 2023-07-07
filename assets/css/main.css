@@ -1971,11 +1971,47 @@ input, select, textarea {
 		  	display: flex;
 		  	justify-content: center;
 		  	align-items: center;
-		  	background-color: #4c3e19;
+		  	background-color: #b2b2b2;
 		  	width: 100vw;
 		  	height: 100vh;
 		  	flex-direction: column;
 		  }
 		  .hadiah img{
-		  	width: 100%;
+		  	width: 70%;
+		  }
+		  .hadiah h2{
+			color: #000;
+		  }
+		  .hadiah h3{
+			letter-spacing: normal;
+			text-transform: capitalize;
+			color: #000;
+		  }
+		  .mandiri{
+			border-bottom: 1px solid #000;
+			margin: 1em;
+			place-self: flex-start;
+		  }
+		  #form{
+			margin: 3em;
+		  }
+		  #comment{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			width: 100%;
+			padding: 0 2em;
+		  }
+		  #comment .wish{
+			place-self: flex-start;
+			border-bottom: 2px solid #ab9252;
+			margin-bottom: 25px;
+			width: 100%;
+		  }
+		  #comment .wish h4,
+		  #comment .wish p{
+			margin: 0;
+			letter-spacing: normal;
+			margin-bottom: 2px;
 		  }
