@@ -1115,6 +1115,7 @@ input, select, textarea {
 		-webkit-backface-visibility: hidden;
 		position: fixed;
 		top: 0;
+		filter: brightness(0.5);
 		left: 0;
 		width: 100%;
 		height: 100vh;
@@ -1631,7 +1632,7 @@ input, select, textarea {
 		.profile{
 			width: 100vw;
 			height: 155vh;
-			background-color: #4a3d1d;
+			background-color: #1d2b3a;
 		}
 		.profile .pria{
 			height: 75vh;
@@ -1828,7 +1829,7 @@ input, select, textarea {
 			width: 100vw;
 			padding: 25px;
 			text-align: center;
-			background-color: #4a3d1d;
+			background-color: #1d2b3a;
 		  }
 		  .container{
 			display: grid;
@@ -1971,24 +1972,26 @@ input, select, textarea {
 		  	display: flex;
 		  	justify-content: center;
 		  	align-items: center;
-		  	background-color: #b2b2b2;
+		  	background-color: #1d2b3a;
 		  	width: 100vw;
-		  	height: 70vh;
+		  	height: 100%;
+		  	padding: 2em 0;
 		  	flex-direction: column;
 		  }
 		  .hadiah img{
 		  	width: 70%;
+		  	filter: brightness(2.5);
 		  }
 		  .hadiah h2{
-			color: #000;
+			color: #fff;
 		  }
 		  .hadiah h3{
 			letter-spacing: normal;
 			text-transform: capitalize;
-			color: #000;
+			color: #fff;
 		  }
 		  .mandiri{
-			border-bottom: 1px solid #000;
+			border-bottom: 1px solid #fff;
 			margin: 1em;
 			place-self: flex-start;
 		  }
@@ -2001,7 +2004,8 @@ input, select, textarea {
 			align-items: center;
 			flex-direction: column;
 			width: 100%;
-			padding: 0 2em;
+			background-color: #1d2b3a;
+			padding: 2em;
 		  }
 		  #comment .wish{
 			place-self: flex-start;
@@ -2015,3 +2019,66 @@ input, select, textarea {
 			letter-spacing: normal;
 			margin-bottom: 2px;
 		  }
+		  /*section footer*/
+#main footer
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background: #1d2b3a;
+	height: 60vh;
+	width: 100vw;
+	position: relative;
+}
+#main footer::before
+{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 0.3rem;
+	height: 40%;
+/*	top: 0;*/
+	background: #b6895b;
+}
+
+#main footer .content h3
+{
+	font-size: 1rem;
+	color: #fff;
+}
+
+#main footer .content p 
+{
+	font-size: 1rem;
+}
+#main footer .content h3 span,
+#main footer .content p span 
+{
+	color: #b6895b;
+}
+
+#main footer .link 
+{
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	flex-direction: column;
+
+
+}
+#main footer .link .content i
+{
+	color: rgba(225, 225, 225, 0.8);
+}
+#main footer .link .content a
+{
+	color: rgba(225, 225, 225, 0.8);
+	padding: 0.7rem;
+	font-size: 1rem;
+	transition: 0.5s;
+	border-bottom: none;
+}
+#main footer .link .content a:hover
+{
+	color: #b6895b;
+}
