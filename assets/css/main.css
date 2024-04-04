@@ -1160,7 +1160,7 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../../images/bg.jpg");
+			background-image: url("../../images/bg1.jpeg");
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -1593,7 +1593,7 @@ input, select, textarea {
 			justify-content: flex-end;
 			align-items: center;
 			flex-direction: column;
-			background-image: url("../../images/kuwu3.jpg");
+			background-image: url("../../images/bg.jpeg");
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center;
@@ -1981,6 +1981,18 @@ input, select, textarea {
 		  .hadiah img{
 		  	width: 70%;
 		  	filter: brightness(2.5);
+		  }
+		  .hadiah img#bca{
+		  	margin-top: 4rem;
+		  	margin-bottom: 4rem;
+		  	width: 50%;
+		  	filter: none;
+		  }
+		  .hadiah img#dana{
+		  	margin-top: 4rem;
+		  	margin-bottom: 4rem;
+		  	width: 50%;
+		  	filter: none;
 		  }
 		  .hadiah h2{
 			color: #fff;
